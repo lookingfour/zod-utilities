@@ -1,2 +1,3 @@
 # zod-utilities
-Additional utilities for zod validation JS library.
+
+Additional utilities for [zod](https://www.npmjs.com/package/zod) validation JS library.
