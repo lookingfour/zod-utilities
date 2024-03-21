@@ -1,6 +1,6 @@
 {
   "name": "@lookingfour/zod-utilities",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Additional utilities for zod validation JS library.",
   "author": {
     "email": "dev@lookingfour.com",
