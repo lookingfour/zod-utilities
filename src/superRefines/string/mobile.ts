@@ -3,7 +3,7 @@ import type { ZodErrMessage } from "../../types";
 import type { default as COUNTRY_MOBILE_CODES } from "../../constants/countryMobileCode";
 import type { ValueOf } from "type-fest";
 import { wrapToArray, type ArrayOrData } from "@lookingfour/js-utilities";
-import { parseZodErrMessage } from "utils";
+import { parseZodErrMessage } from "../../utils";
 
 /**
  * A super refine that will check if the string is a valid mobile number of
