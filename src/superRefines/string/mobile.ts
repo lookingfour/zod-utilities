@@ -1,9 +1,9 @@
 import { z, type RefinementCtx } from "zod";
-import type { ZodErrMessage } from "../../types";
-import type { default as COUNTRY_MOBILE_CODES } from "../../constants/countryMobileCode";
+import type { ZodErrMessage } from "../../types.js";
+import type { default as COUNTRY_MOBILE_CODES } from "../../constants/countryMobileCode/index.js";
 import type { ValueOf } from "type-fest";
 import { wrapToArray, type ArrayOrData } from "@lookingfour/js-utilities";
-import { parseZodErrMessage } from "../../utils";
+import { parseZodErrMessage } from "../../utils/index.js";
 
 /**
  * A super refine that will check if the string is a valid mobile number of

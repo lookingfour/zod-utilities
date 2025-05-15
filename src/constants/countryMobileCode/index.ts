@@ -1,3 +1,3 @@
-export * as default from "./mobileCountryCode";
+export * as default from "./mobileCountryCode.js";
 
-export * from "./mobileCountryCode";
+export * from "./mobileCountryCode.js";

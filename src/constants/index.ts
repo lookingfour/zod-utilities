@@ -1,1 +1,1 @@
-export { default as COUNTRY_MOBILE_CODES } from "./countryMobileCode";
+export { default as COUNTRY_MOBILE_CODES } from "./countryMobileCode/index.js";

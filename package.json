@@ -20,7 +20,8 @@
     "email": "dev@lookingfour.com",
     "url": "https://github.com/lookingfour/zod-utilities/issues"
   },
-  "main": "./dist/cjs/index.js",
+  "type": "module",
+  "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
   "files": [
     "./dist/**/*"
@@ -28,35 +29,33 @@
   "exports": {
     ".": {
       "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js",
+      "require": null,
       "default": "./dist/esm/index.js"
     },
     "./constants": {
       "import": "./dist/esm/constants/index.js",
-      "require": "./dist/cjs/constants/index.js",
+      "require": null,
       "default": "./dist/esm/constants/index.js"
     },
     "./constants/countryMobileCode": {
       "import": "./dist/esm/constants/countryMobileCode/index.js",
-      "require": "./dist/cjs/constants/countryMobileCode/index.js",
+      "require": null,
       "default": "./dist/esm/constants/countryMobileCode/index.js"
     },
     "./superRefines": {
       "import": "./dist/esm/superRefines/index.js",
-      "require": "./dist/cjs/superRefines/index.js",
+      "require": null,
       "default": "./dist/esm/superRefines/index.js"
     },
     "./superRefines/string": {
       "import": "./dist/esm/superRefines/string/index.js",
-      "require": "./dist/cjs/superRefines/string/index.js",
+      "require": null,
       "default": "./dist/esm/superRefines/string/index.js"
     }
   },
   "license": "MIT",
   "scripts": {
-    "build": "bun run build-cjs && bun run build-esm",
-    "build-cjs": "rimraf dist/cjs && tsc --project tsconfig.cjs.json",
-    "build-esm": "rimraf dist/esm && tsc --project tsconfig.esm.json",
+    "build": "rimraf dist/esm && tsc --project tsconfig.build.json",
     "eslint": "eslint --no-error-on-unmatched-pattern",
     "eslint-check": "bun run eslint --report-unused-disable-directives --max-warnings=0",
     "eslint-fix": "bun run eslint-check --fix",
@@ -69,23 +68,26 @@
     "typelint-check": "bun run typelint",
     "typelint-fix": "bun run typelint-check"
   },
+  "dependencies": {
+    "zod": "^3.24.4"
+  },
   "devDependencies": {
     "@lookingfour/eslint-config": "^0.0.2",
-    "@lookingfour/js-utilities": "^0.1.0",
+    "@lookingfour/js-utilities": "^1.0.1",
     "@lookingfour/tsconfig": "^0.0.1",
-    "@types/bun": "^1.0.8",
-    "@types/node": "^20.11.25",
-    "@typescript-eslint/eslint-plugin": "^7.1.1",
-    "@typescript-eslint/parser": "^7.1.1",
-    "eslint": "^8.57.0",
+    "@types/bun": "^1.2.13",
+    "@types/node": "^20.17.47",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
-    "husky": "^9.0.11",
-    "npm": "^10.5.0",
+    "husky": "^9.1.7",
+    "npm": "^10.9.2",
     "prettier": "3.2.5",
-    "prettier-plugin-jsdoc": "^1.3.0",
-    "rimraf": "^5.0.5",
-    "type-fest": "^4.11.1",
-    "typescript": "^5.4.2"
+    "prettier-plugin-jsdoc": "^1.3.2",
+    "rimraf": "^5.0.10",
+    "type-fest": "^4.41.0",
+    "typescript": "^5.8.3"
   },
   "eslintConfig": {
     "extends": [
@@ -102,8 +104,5 @@
     ],
     "endOfLine": "lf",
     "trailingComma": "es5"
-  },
-  "dependencies": {
-    "zod": "^3.22.4"
   }
 }

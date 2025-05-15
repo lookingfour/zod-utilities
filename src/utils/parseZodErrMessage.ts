@@ -1,4 +1,4 @@
-import type { ZodErrMessage } from "../types";
+import type { ZodErrMessage } from "../types.js";
 
 /**
  * Parse the message from the zod error message option value.
